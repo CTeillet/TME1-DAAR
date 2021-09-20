@@ -1,36 +1,28 @@
 <template>
   <div class="home">
     <img src="@/assets/book.png" alt="" />
-    <div class="title">
-      Gutenberg project
+    <div class="title">Gutenberg project</div>
+
+    <div class="tgp">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.gutenberg.org/"
+        >The Gutenberg project</a
+      >
     </div>
+
     <div class="links">
-      <div class="link">
-        <router-link to="/lang">Find books</router-link>
-      </div>
-      <div class="link">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.gutenberg.org/"
-          >The Gutenberg project</a
-        >
-      </div>
       <div class="link">
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://www-apr.lip6.fr/~buixuan/daar2019"
-          >DAAR</a
+          >UE DAAR</a
         >
       </div>
       <div class="link">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/arthurescriou/gutenberg-app"
-          >This app repository</a
-        >
+        <router-link to="/find">Find books</router-link>
       </div>
     </div>
   </div>
@@ -50,6 +42,13 @@
   text-align: center;
 }
 
+.tgp {
+  text-align: center;
+  background: #fefefe;
+  padding: 5rem 13rem 5rem 13rem;
+  margin-block-end: 3rem;
+}
+
 .links {
   display: Grid;
   grid-gap: 1rem;
@@ -60,7 +59,6 @@
   text-align: center;
   background: #fefefe;
   padding: 3rem;
-  border-radius: 12px;
 }
 
 .link a {

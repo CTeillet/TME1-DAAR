@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Books from '../views/Books.vue'
-import Languages from '../views/Languages.vue'
+import FindBooks from '../views/FindBooks.vue'
+import OtherLanguages from '../views/OtherLanguages.vue'
 
 Vue.use(VueRouter)
 
@@ -13,9 +14,14 @@ const routes = [
     component: Home,
   },
   {
-    path: '/lang',
-    name: 'Languages',
-    component: Languages,
+    path: '/otherLanguages',
+    name: 'OtherLanguages',
+    component: OtherLanguages,
+  },
+  {
+    path: '/find',
+    name: 'Find Books',
+    component: FindBooks,
   },
   {
     path: '/lang/:lang',
