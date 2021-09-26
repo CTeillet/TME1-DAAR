@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getLanguages, getBooksPerLanguage, getBooks } from '../service/books'
+import { getLanguages, getBooksPerLanguage, getBooks } from '@/service/books'
 
 Vue.use(Vuex)
 

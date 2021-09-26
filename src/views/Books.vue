@@ -78,6 +78,7 @@ export default {
 .book-cover {
   grid-area: cover;
 }
+
 .book-cover img {
   height: 10rem;
 }

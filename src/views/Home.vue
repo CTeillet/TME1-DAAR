@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img src="@/assets/book.png" alt="" />
-    <div class="title">Gutenberg project</div>
+    <div class="title">DaarLib Reader</div>
 
     <div class="tgp">
       <a
@@ -17,7 +17,7 @@
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www-apr.lip6.fr/~buixuan/daar2019"
+          href="https://www-apr.lip6.fr/~buixuan/daar2021"
           >UE DAAR</a
         >
       </div>
@@ -29,6 +29,7 @@
 </template>
 
 <style media="screen" scoped>
+
 .home {
   display: flex;
   flex-direction: column;
