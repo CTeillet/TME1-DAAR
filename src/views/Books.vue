@@ -1,13 +1,13 @@
 <template lang="html">
   <div class="books">
     <div class="title">
-      {{ $route.params.lang + ' books' }}
+      {{ $route.params.language + ' books' }}
     </div>
     <div class="books-cards">
       <a
         target="_blank"
         rel="noopener noreferrer"
-        :href="'https://www.gutenberg.org/ebooks/' + book.link"
+        :href="'https://www.gutenberg.org/ebooks/' + book.gutenbergID"
         class="book"
         v-for="book in this.$store.state.books"
         v-bind:key="book.title"
@@ -15,10 +15,10 @@
         <div class="book-content">
           <div>
             <div class="book-title">
-              {{ book.Title }}
+              {{ book.title }}
             </div>
             <div class="book-author">
-              {{ book.Author }}
+              {{ book.author }}
             </div>
           </div>
           <div class="book-cover">
@@ -48,6 +48,7 @@ export default {
   data() {
     return {
       lang: this.$route.params.lang,
+      language: this.$route.params.language,
     }
   },
 }

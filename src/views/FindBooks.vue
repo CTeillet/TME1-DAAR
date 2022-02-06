@@ -4,18 +4,36 @@
       Find Books
     </div>
 
-    <input type="search">
-    <button>Search</button>
+
+
+    <div class='grid'>
+      <div class='ligne'>
+        <input v-model='expression' type='search'>
+      </div>
+      <div class='language'>
+        <router-link :to="'/search/'+ 'search' + '/' + expression" >Recherche</router-link>
+      </div>
+      <div class='language'>
+        <router-link :to="'/search/'+ 'advanced' + '/' + expression" >Recherche avancée</router-link>
+      </div>
+      <div class='language'>
+        <router-link :to="'/search/'+ 'id' + '/' + expression" >Recherche par id</router-link>
+      </div>
+      <div class='language'>
+        <router-link :to="'/search/'+ 'title' + '/' + expression" >Recherche par titre</router-link>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
 
     <div class="grid">
       <div class="language">
-        <router-link to="/lang/French">Livres en Francais</router-link>
+        <router-link to="/lang/fr">Livres en Francais</router-link>
       </div>
       <div class="language">
-        <router-link to="/lang/German">Deutshe Bucher</router-link>
-      </div>
-      <div class="language">
-        <router-link to="/lang/English">English Books</router-link>
+        <router-link to="/lang/en">English Books</router-link>
       </div>
       <div class="language">
         <router-link to="/otherLanguages">Other Languages</router-link>
@@ -29,8 +47,18 @@ export default {
   mounted() {
     this.$store.dispatch('fetchLanguages')
   },
+  data() {
+    return {
+      expression: '',
+    }
+  },
+
+
 }
 </script>
+
+
+
 
 <style lang="css" scoped>
 .title {
@@ -39,6 +67,13 @@ export default {
   font-size: 2.3em;
   padding-bottom: 2rem;
   text-align: center;
+}
+.ligne{
+  grid-column-start: 0;
+  grid-column-end: 3;
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
 }
 .grid {
   display: Grid;

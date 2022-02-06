@@ -14,8 +14,8 @@
         v-for="lang in $store.state.languages"
         v-bind:key="lang"
       >
-        <router-link :to="'lang/' + lang">
-          {{ lang }}
+        <router-link :to="'lang/' + lang[1] + '/' + lang[0]">
+          {{ lang[0] }}
         </router-link>
       </div>
     </div>

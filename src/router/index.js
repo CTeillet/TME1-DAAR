@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Books from '../views/Books.vue'
 import FindBooks from '../views/FindBooks.vue'
 import OtherLanguages from '../views/OtherLanguages.vue'
+import SearchResults from '@/views/SearchResults'
 
 Vue.use(VueRouter)
 
@@ -24,9 +25,14 @@ const routes = [
     component: FindBooks,
   },
   {
-    path: '/lang/:lang',
+    path: '/lang/:lang/:language',
     name: 'Books',
     component: Books,
+  },
+  {
+    path: '/search/:type/:expression',
+    name: 'SearchResults',
+    component: SearchResults,
   },
 ]
 
